@@ -14,3 +14,8 @@ If two elements don't differ in the last character, then they should be sorted b
 
 //My Solution
 
+function sortMe(arr){
+    return arr.slice().sort((a, b) =>
+    (a + "").slice(-1).localeCompare((b + "").slice(-1)) ||
+    arr.indexOf(a) - arr.indexOf(b));
+}
